@@ -68,7 +68,7 @@
         </h1>
         <div class="subheading mb-5">rexxar (dot) lin (at) gmail (dot) com
         </div>
-        <p class="lead mb-5">Robotics software engineer with hands-on experience on robots, system prototyping, and fabrication.</p>
+        <p class="lead mb-5">Robotics software engineer with hands-on experience on robots, system prototyping, and hardware fabrication.</p>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/ch-lin/">
             <i class="fab fa-linkedin-in"></i>
@@ -169,37 +169,88 @@
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Independent Study</h3>
+            <h3 class="mb-0">CoSTAR Block Stacking Dataset</h3>
             <div class="subheading mb-3">Johns Hopkins University</div>
             <ul class="fa-ul mb-0">
                 <li>
                   <i class="fa-li fa fa-angle-right"></i>
-                  Contributed to the release of the <a href="https://sites.google.com/site/costardataset">CoSTAR Block Stacking Dataset</a> on robotic grasping with >10k attempts.
+                  Contributed to the release of the <a href="https://sites.google.com/site/costardataset">CoSTAR Block Stacking Dataset</a> (BSD), a novel dataset on robotic grasping with >10k attempts and >2M frames of real data.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  Robots can grasp an object effectively with model-based perception and motion planning systems, but not on unstructured scenarios.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  A mild relaxation of the grasping task can cause neural network based algorithms to fail on even a simple block stacking task when executed under more realistic circumstances.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  Existing robotics datasets provide a good representation of various aspects of manipulation, but fail to capture end-to-end task planning with obstacle avoidance.
+                <li>
+                  <i class="fa-li fa fa-lightbulb"></i>
+                  The CoSTAR BSD is aimed to let researchers investigate how a machine learning system learn complex workspace constraints from a robot grasping and stacking colored blocks.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Implemented data loader, training script, and visualization scripts to be released as a package on PyPI for Tensorflow and PyTorch, with detailed documentations, examples, and training splits available to facilitate researchs on the dataset
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Reduced the time to load a batch of data by up to 80%; training time to run 200 epochs on the dataset is reduced from 800+ hours to ~200 hours.
                 <li>
                   <i class="fa-li fa fa-angle-right"></i>
-                  Work on applying reinforcement learning methods using PyTorch on the dataset to determine best actions in different scenarios and improve the success rate.
+                  The paper is currently under review for IROS 2019.
+                <li>
+                  <i class="fa-li fa fa-angle-right"></i>
+                  Work on applying reinforcement learning methods on the dataset to determine best actions in different scenarios and improve the success rate.
+                <li>
+                  <i class="fa-li fa fa-link"></i>
+                  <a href="https://sites.google.com/site/costardataset">Website for the CoSTAR BSD</a>
+                <li>
+                  <i class="fa-li fa fa-code-branch"></i>
+                  <a href="https://github.com/ahundt/costar_dataset">ahundt/costar_dataset on GitHub</a>
+                <li>
+                  <i class="fa-li fa fa-code-branch"></i>
+                  <a href="https://github.com/jhu-lcsr/costar_plan">jhu-lcsr/costar_plan on GitHub</a> (The robot system collected data using the CoSTAR system.)
                 <li>
             </ul>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">Sept 2018 - Present</span>
+            <span class="text-primary">Sept 2018 - Mar 2019</span>
           </div>
         </div>
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Library Seat Detection</h3>
+            <h3 class="mb-0">Smart Environment Analyzing Technology (SEAT)</h3>
             <div class="subheading mb-3">Johns Hopkins University</div>
             <ul class="fa-ul mb-0">
                 <li>
                   <i class="fa-li fa fa-angle-right"></i>
                   Led a team of 3 and designed a proof-of-concept computer vision (CV) system in Python for the university library in determining the status of a seat as occupied, on hold, or empty.
                 <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  With students often leave belongings in a seat to mark it as occupied and disappear, locating a vacant seat during exam periods can be an arduous task with the maze of levels in the library.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  Hardware solutions for occupancy detection is too expensive to deploy to every seat in the library. 
+                <li>
+                  <i class="fa-li fa fa-lightbulb"></i>
+                  CCTV surveillance cameras are already in place in most study areas and CV systems combined with deep networks are great at detecting people and objects.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Collected and labeled series of simulated surveillance footages on a study area from 3 different angles with 4 actors move around and marking between seats.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Applied pre-trained models on the COCO dataset for human and chair detection in Tensorflow, combined with traditional CV techniques in OpenCV to determine seat status from current and past frames.
+                <li>
                   <i class="fa-li fa fa-angle-right"></i>
-                  Collected simulated surveillance footage and applied a fusion of traditional CV and machine learning techniques with OpenCV and Tensorflow, resulting in >90% accuracy in determining the status of a seat.
+                  The resulting system has >90% soft accuracy in determining the status of a seat, and a realtime performance at 10 frames per second.
+                <li>
+                  <i class="fa-li fa fa-video"></i>
+                  <a href="https://www.youtube.com/watch?v=CuB9HgXosaA">Video demonstration</a>
                 <li>
                   <i class="fa-li fa fa-link"></i>
-                  <a href="https://www.youtube.com/watch?v=CuB9HgXosaA">Video demonstration</a>
+                  <a href="https://drive.google.com/file/d/13f1mzwg-YVbSFcGfMVgpKGlfl4TwENoi/view?usp=sharing">Detailed report on the project</a>
+                <li>
+                  <i class="fa-li fa fa-code-branch"></i>
+                  <a href="https://github.com/RexxarCHL/library-seat-detection">rexxarchl/library-seat-detection on GitHub</a>
                 <li>
             </ul>
           </div>
@@ -215,16 +266,43 @@
             <ul class="fa-ul mb-0">
                 <li>
                   <i class="fa-li fa fa-angle-right"></i>
-                  Created a system for the UR5 robot arm to play Jenga autonomously using the ROS framework.
+                  Created a system for the UR5 robot arm to play Jenga autonomously using the Robot Operating System (ROS) framework in C++ and Python.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  The idea of demonstrating multi-sensor integration capabilities by making robot arms play Jenga have been around since as early as 2008 by Kroger et al in paper <a href="https://ieeexplore.ieee.org/document/4624586">"A manipulator plays Jenga"</a>.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  ROS that is norm of robotic systems programming today was still in its rudimentary stages back in 2008. Robot Jenga players use proprietary systems, custom communication fabrics, up to four computers for control, and often not play on a full-size tower.
+                <li>
+                  <i class="fa-li fa fa-lightbulb"></i>
+                  With night and day difference in computational power and the maturing ROS ecosystem, it should be much easier to replicate the results today.
+                <li>
+                  <i class="fa-li fa fa-lightbulb"></i>
+                  Artificial Intelligence researches used games as a simplified representation of real world tasks. Plus, it was tedious to play Jenga alone and a Jenga-playing robot be a welcomed friend.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Designed and built a project-specific end-effector that emulated human Jenga strategy using PTC Creo and Autodesk EAGLE.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  The end-effector has a micro load cell to sense looseness of blocks and push a block out, a micro LIDAR to localize the salient block, and a pinion and rack gripper to extract and return the block. 
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Software developed using C++, Python, and Arduino. The implementation is built upon a variety of existing packages and project specific packages that composed of more than 3000 lines of C++ code and some Python and MATLAB scripts.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  The project specific tasks included calibration for the camera, end-effector control that runs on the Arduino UNO, AI player for Jenga, custom ROS messages and launch files, and trajectory control for the robot arm.
                 <li>
                   <i class="fa-li fa fa-angle-right"></i>
-                  Designed and built a project-specific end-effector that emulated human Jenga strategy. The robot can play a block in 1 minute and can reach as high as 20 levels before the tower collapses.
+                  The resulting robotic system can play a block in 1 minute and can reach as high as 20 levels before the tower collapses.
                 <li>
-                  <i class="fa-li fa fa-angle-right"></i>
-                  Software developed using C++, Python, and Arduino. Hardware fabricated using PTC Creo and Autodesk EAGLE.
+                  <i class="fa-li fa fa-video"></i>
+                  <a href="https://www.youtube.com/watch?v=KtRhFWFU7mw">Video demonstration</a>
                 <li>
                   <i class="fa-li fa fa-link"></i>
-                  <a href="https://www.youtube.com/watch?v=KtRhFWFU7mw">Video demonstration</a>
+                  <a href="https://drive.google.com/file/d/16NKua-MJHY3XStXdP2z2SLvy-ZEi5fuj/view?usp=sharing">Detailed report on the project</a>
+                <li>
+                  <i class="fa-li fa fa-code-branch"></i>
+                  <a href="https://github.com/RexxarCHL/UR5_Plays_Jenga">rexxarchl/UR5_Plays_Jenga on GitHub</a>
                 <li>
             </ul>
           </div>
@@ -240,15 +318,95 @@
             <ul class="fa-ul mb-0">
                 <li>
                   <i class="fa-li fa fa-angle-right"></i>
-                  Led a team of 3 and designed a remotely-controlled rescue robot in 2013 and a remotely-controlled disaster relief robot in 2014.
+                  Led a team of 3 and designed a remotely-controlled inspection robot in 2013 and a remotely-controlled disaster relief robot in 2014.
                 <li>
-                  <i class="fa-li fa fa-angle-right"></i>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  The Student Design Challenge publish designated scenarios and tasks each year, and students must compete in timed trials with their devices.
+                <li>
+                  <i class="fa-li fa fa-lightbulb"></i>
                   The robots were built to perform designated tasks using Arduino and homemade parts.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  The task for 2013 is to design a remotely-controlled inspection device for a nuclear plant compromised with radioactivity. Designed a 4-wheel mobile robot with a camera on a turret mount and a gripper.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  The task for 2014 is to design a remotely-controlled Unmanned Air Vechicle (UAV) that carries a payload while flying around the course and pass through gates in the course. Designed a tri-copter with controllable tail rotor with a cargo drop latch.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Modified a Sony PS2 controller with Arduino as a 14-degress-of-freedom wireless controller for the robots.
+                <li>
+                  <i class="fa-li fa fa-video"></i>
+                  <a href="https://www.youtube.com/watch?v=pFpcsMRkzuE">Video demonstration for the 2013 robot</a>
                 <li>
             </ul>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">2013, 2014</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Cooking Intelligence Simulator (CookIS)</h3>
+            <div class="subheading mb-3">National Tsing Hua University</div>
+            <ul class="fa-ul mb-0">
+                <li>
+                  <i class="fa-li fa fa-angle-right"></i>
+                  Led a team of 4 and developed a cross-platform mobile app on step-by-step multiple recipe cooking guide.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  New cooks who just picked up at-home cooking find it difficult to cook multiple dishes at the same time, while experienced cooks have ways to multitask.
+                <li>
+                  <i class="fa-li fa fa-lightbulb"></i>
+                  Given structured cooking recipes, the setup of the kitchen, and the equipments avaiable, we can schedule the recipes on a step-by-step basis to cook on different stoves in different cookers to minimize the hustle while training the multitask mindset at the same time. 
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Worked on hands-free CV controls using OpenCV in Java
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Worked on frontend Javascript and UI/UX design of the app.
+                <li>
+                  <i class="fa-li fa fa-angle-right"></i>
+                  The final app was released on Android, iOS, and Windows Phone using Intel XDK and Adobe Phonegap.
+                <li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2014</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Smark, a Smart Parking System</h3>
+            <div class="subheading mb-3">Industrial Technology Research Institute (ITRI), Hsinchu, Taiwan</div>
+            <ul class="fa-ul mb-0">
+                <li>
+                  <i class="fa-li fa fa-angle-right"></i>
+                  Designed a smart parking system during a summer internship at the Information and Communications Department.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  Finding an empty parking space in a large parking lot can be time-consuming and frustrating. Hardware solutions are expensive to deploy.
+                <li>
+                  <i class="fa-li fa fa-exclamation-circle"></i>
+                  A proprietary license plate recognition system was looking for applications.
+                <li>
+                  <i class="fa-li fa fa-lightbulb"></i>
+                  Surveillance cameras are already in place to cover most parking spaces, and every car has a licence plate on the front and back.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Built a small-scale simulated parking lot with a camera on a turret mount as a simulation of real-world parking lots using Arduino.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Designed a system to track locations of parked cars and vacancies using the surveillance camera with computer vision and the proprietary license plate recognition system.
+                <li>
+                  <i class="fa-li fa fa-wrench"></i>
+                  Implemented a website for the system to help customers find their cars or find a vacant space using Ruby on Rails backend.
+                <li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">2013</span>
           </div>
         </div>
 
